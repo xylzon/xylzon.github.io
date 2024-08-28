@@ -10,7 +10,7 @@
 </head>
 <body>
     <!-- Sidebar -->
-    <div class="sidebar">
+    <div class="sidebar" id="sidebar">
         <h2>Xylzon</h2>
         <ul>
             <li><a href="#projects"><i class="fas fa-briefcase"></i> Our Projects</a></li>
@@ -22,12 +22,13 @@
 
     <!-- Header -->
     <header class="sticky-header">
+        <button id="sidebar-toggle" class="sidebar-toggle"><i class="fas fa-bars"></i></button>
         <h1>Xylzon</h1>
         <p>Innovate, Elevate, Transform</p>
     </header>
 
     <!-- Main Content -->
-    <main>
+    <main id="main-content">
         <section id="projects">
             <h2>Our Projects</h2>
             <p>Details about the projects...</p>
@@ -61,7 +62,7 @@
         </div>
     </footer>
 
-    <!-- JavaScript for Animations -->
+    <!-- JavaScript for Animations and Sidebar Toggle -->
     <script src="scripts.js"></script>
 </body>
 </html>
