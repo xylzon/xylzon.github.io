@@ -3,99 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Xylzon | Innovate. Elevate. Transform.</title>
+    <title>Xylzon - Innovate. Elevate. Transform.</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-
-    <!-- Sidebar -->
-    <div class="sidebar" id="sidebar">
-        <button class="close-btn" onclick="toggleSidebar()">×</button>
-        <a href="#home">Home</a>
-        <a href="#about">About Us</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
-    </div>
-
     <!-- Header -->
-    <header id="header">
-        <div class="container">
-            <div class="logo">
-                <h1>Xylzon</h1>
-            </div>
-            <nav class="nav">
-                <button class="menu-btn" onclick="toggleSidebar()">☰</button>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+    <header class="sticky-header">
+        <div class="logo">
+            <h1>Xylzon</h1>
+        </div>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle" id="menu-toggle">
+            <i class="fas fa-bars"></i>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero-section">
-        <div class="container">
-            <h2>Innovate. Elevate. Transform.</h2>
-            <p>We create groundbreaking creative web applications.</p>
-            <a href="#services" class="btn">Our Services</a>
-        </div>
-    </section>
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </aside>
 
-    <!-- About Us Section -->
-    <section id="about" class="about-section">
-        <div class="container">
-            <h2>About Us</h2>
-            <p>Xylzon is dedicated to innovation and creative solutions. Our team excels in creating web apps that not only solve problems but also inspire and engage users.</p>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="services-section">
-        <div class="container">
-            <h2>Our Services</h2>
-            <div class="services">
-                <div class="service">
-                    <i class="fas fa-paint-brush"></i>
-                    <h3>Design</h3>
-                    <p>Creative and intuitive web design tailored to your needs.</p>
-                </div>
-                <div class="service">
-                    <i class="fas fa-code"></i>
-                    <h3>Development</h3>
-                    <p>High-quality web apps built with the latest technology.</p>
-                </div>
-                <div class="service">
-                    <i class="fas fa-chart-line"></i>
-                    <h3>SEO Optimization</h3>
-                    <p>Optimized for search engines to ensure visibility and growth.</p>
-                </div>
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="hero-content">
+                <h2>Innovate. Elevate. Transform.</h2>
+                <p>Leading the way in creative web applications.</p>
+                <a href="#services" class="cta-button">Learn More</a>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <div class="container">
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <h2>About Us</h2>
+            <p>Xylzon is dedicated to crafting innovative web applications that elevate businesses and transform industries.</p>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services-section">
+            <h2>Our Services</h2>
+            <div class="service-item">
+                <i class="fas fa-laptop-code"></i>
+                <h3>Web Development</h3>
+                <p>Custom web app solutions tailored to your needs.</p>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-paint-brush"></i>
+                <h3>UI/UX Design</h3>
+                <p>Intuitive and visually appealing interfaces.</p>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-mobile-alt"></i>
+                <h3>Mobile Optimization</h3>
+                <p>Responsive designs for all devices.</p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
             <h2>Contact Us</h2>
-            <p>Reach out to us for any queries or project discussions.</p>
-            <a href="mailto:info@xylzon.com" class="btn">Email Us</a>
-        </div>
-    </section>
+            <p>Ready to transform your business? Get in touch with us!</p>
+            <a href="mailto:info@xylzon.com" class="cta-button">Email Us</a>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer>
-        <div class="container">
+        <div class="footer-content">
             <div class="social-links">
                 <a href="#"><i class="fab fa-facebook-f"></i></a>
                 <a href="#"><i class="fab fa-twitter"></i></a>
                 <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
             </div>
-            <p>&copy; 2024 Xylzon. All Rights Reserved.</p>
-            <p><a href="#privacy">Privacy Policy</a> | <a href="#terms">Terms of Service</a></p>
+            <p>&copy; 2024 Xylzon. All rights reserved.</p>
         </div>
     </footer>
 
