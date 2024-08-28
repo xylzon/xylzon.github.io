@@ -18,6 +18,7 @@ body {
     box-sizing: border-box;
     border-right: 5px solid;
     animation: gradient-border 3s infinite;
+    overflow: auto;
 }
 
 .sidebar h2 {
@@ -39,6 +40,10 @@ body {
     color: #f0f0f0;
     font-size: 18px;
     transition: color 0.3s ease;
+}
+
+.sidebar ul li a i {
+    margin-right: 10px;
 }
 
 .sidebar ul li a:hover {
@@ -90,6 +95,11 @@ main h2 {
     text-decoration: none;
     color: #f0f0f0;
     transition: color 0.3s ease;
+    font-size: 18px;
+}
+
+.footer .social-media a i {
+    margin: 0;
 }
 
 .footer .social-media a:hover,
