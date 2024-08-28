@@ -8,13 +8,13 @@ body {
 }
 
 a {
-    color: #bb86fc; /* Light purple for links */
+    color: #1e88e5; /* Blue for links */
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 a:hover {
-    color: #3700b3; /* Darker purple on hover */
+    color: #0d47a1; /* Darker blue on hover */
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -34,7 +34,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     background-color: #1f1f1f; /* Darker header background */
     padding: 15px 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
     z-index: 1000;
 }
 
@@ -64,7 +64,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .sticky-header .nav-menu ul li a:hover {
-    color: #bb86fc; /* Light purple on hover */
+    color: #1e88e5; /* Blue on hover */
 }
 
 .menu-toggle {
@@ -83,7 +83,7 @@ h1, h2, h3, h4, h5, h6 {
     height: 100%;
     background-color: #1f1f1f; /* Dark sidebar background */
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
     transition: left 0.3s ease;
     z-index: 999;
 }
@@ -102,6 +102,11 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 18px;
     display: block;
     font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.sidebar nav ul li a:hover {
+    color: #1e88e5; /* Blue on hover */
 }
 
 /* Main Content */
@@ -111,7 +116,7 @@ main {
 }
 
 .hero-section {
-    background: #333333; /* Dark background */
+    background: #121212; /* Dark background */
     color: #ffffff; /* Light text */
     padding: 100px 20px;
     text-align: center;
@@ -126,7 +131,7 @@ main {
     left: -150px;
     width: 300px;
     height: 300px;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(30, 136, 229, 0.2); /* Blue overlay */
     border-radius: 50%;
     z-index: 1;
 }
@@ -147,8 +152,8 @@ main {
 
 .cta-button {
     padding: 12px 28px;
-    background-color: #bb86fc; /* Light purple */
-    color: #333333; /* Dark text */
+    background-color: #1e88e5; /* Blue background */
+    color: #ffffff; /* Light text */
     font-weight: 700;
     border: none;
     cursor: pointer;
@@ -161,7 +166,7 @@ main {
 }
 
 .cta-button:hover {
-    background-color: #3700b3; /* Darker purple */
+    background-color: #0d47a1; /* Darker blue */
     color: #ffffff; /* Light text */
 }
 
@@ -190,18 +195,18 @@ main {
     background-color: #333333; /* Darker card background */
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .service-item:hover {
     transform: translateY(-8px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.9);
 }
 
 .service-item i {
     font-size: 50px;
-    color: #bb86fc; /* Light purple */
+    color: #1e88e5; /* Blue */
     margin-bottom: 20px;
 }
 
@@ -244,7 +249,7 @@ footer {
 }
 
 .footer-content .social-links a:hover {
-    color: #bb86fc; /* Light purple on hover */
+    color: #1e88e5; /* Blue on hover */
 }
 
 .footer-content p {
