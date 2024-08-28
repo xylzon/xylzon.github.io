@@ -5,6 +5,7 @@ body {
     background-color: #121212; /* Dark theme */
     color: #f0f0f0;
     display: flex;
+    flex-direction: column;
 }
 
 /* Sidebar */
@@ -53,12 +54,14 @@ body {
     text-align: center;
     border-bottom: 5px solid;
     animation: gradient-border 3s infinite;
+    z-index: 10;
 }
 
 /* Main Content */
 main {
     margin-left: 250px; /* Adjust this according to the sidebar width */
     padding: 20px;
+    flex-grow: 1;
 }
 
 main section {
@@ -80,6 +83,7 @@ main h2 {
     animation: gradient-border 3s infinite;
 }
 
+/* Social Media and Footer Links */
 .footer .social-media a,
 .footer .footer-links a {
     margin: 0 10px;
@@ -103,5 +107,53 @@ main h2 {
     }
     100% {
         border-color: #00aaff;
+    }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        border-right: none;
+        border-bottom: 5px solid;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .sidebar ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .sidebar ul li {
+        margin: 0;
+        padding: 10px;
+        text-align: center;
+        flex: 1;
+    }
+
+    .sticky-header {
+        position: static;
+        border-bottom: none;
+        border-top: 5px solid;
+    }
+
+    main {
+        margin-left: 0;
+    }
+
+    .footer {
+        border-top: 5px solid;
+        border-bottom: none;
     }
 }
