@@ -17,13 +17,14 @@ body {
     padding: 20px;
     box-sizing: border-box;
     border-right: 5px solid;
-    animation: gradient-border 3s infinite;
+    animation: gradient-border 3s infinite, slide-in 0.5s ease-out;
     overflow: auto;
 }
 
 .sidebar h2 {
     color: #00aaff;
     text-align: center;
+    animation: fade-in 1s ease-out;
 }
 
 .sidebar ul {
@@ -33,6 +34,7 @@ body {
 
 .sidebar ul li {
     margin: 20px 0;
+    animation: fade-in 1s ease-out;
 }
 
 .sidebar ul li a {
@@ -58,7 +60,7 @@ body {
     padding: 20px;
     text-align: center;
     border-bottom: 5px solid;
-    animation: gradient-border 3s infinite;
+    animation: gradient-border 3s infinite, fade-in 1s ease-out;
     z-index: 10;
 }
 
@@ -72,6 +74,7 @@ main {
 main section {
     padding: 20px 0;
     border-bottom: 2px solid #2a2a2a;
+    animation: fade-in 1s ease-out;
 }
 
 main h2 {
@@ -85,7 +88,7 @@ main h2 {
     padding: 20px;
     text-align: center;
     border-top: 5px solid;
-    animation: gradient-border 3s infinite;
+    animation: gradient-border 3s infinite, fade-in 1s ease-out;
 }
 
 /* Social Media and Footer Links */
@@ -96,6 +99,8 @@ main h2 {
     color: #f0f0f0;
     transition: color 0.3s ease;
     font-size: 18px;
+    display: inline-block;
+    animation: fade-in 1s ease-out;
 }
 
 .footer .social-media a i {
@@ -120,6 +125,28 @@ main h2 {
     }
 }
 
+/* Fade-in Animation */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Slide-in Animation */
+@keyframes slide-in {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
 /* Responsive Design */
 @media screen and (max-width: 768px) {
     body {
@@ -136,6 +163,7 @@ main h2 {
         justify-content: space-between;
         align-items: center;
         padding: 10px;
+        animation: slide-in 0.5s ease-out;
     }
 
     .sidebar ul {
@@ -166,4 +194,38 @@ main h2 {
         border-top: 5px solid;
         border-bottom: none;
     }
+
+    /* Animation class for scroll effects */
+.animate {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
+
+/* Initial state for scroll animations */
+main section {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+/* Hover effects for social media icons */
+.icon-hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+}
+
+/* Hover effects for sidebar links */
+.link-hover {
+    background-color: #333;
+    transition: background-color 0.3s ease;
+}
+
+/* Additional styles for hover effects */
+.footer .social-media a i {
+    transition: transform 0.3s ease;
+}
+.sidebar ul li a {
+    transition: background-color 0.3s ease;
+}
+
+}  
