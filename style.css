@@ -1,20 +1,24 @@
 /* General Styles */
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #101010;
-    color: #f5f5f5;
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text */
 }
 
 a {
-    color: #ff4c60;
+    color: #bb86fc; /* Light purple for links */
     text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #3700b3; /* Darker purple on hover */
 }
 
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
-    font-weight: 600;
 }
 
 .container {
@@ -28,9 +32,9 @@ h1, h2, h3, h4, h5, h6 {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: #181818;
+    background-color: #1f1f1f; /* Darker header background */
     padding: 15px 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     z-index: 1000;
 }
 
@@ -42,29 +46,30 @@ h1, h2, h3, h4, h5, h6 {
 
 .sticky-header .logo h1 {
     font-size: 28px;
-    color: #ffffff;
+    color: #e0e0e0; /* Light text */
+    font-weight: 700;
 }
 
 .sticky-header .nav-menu ul {
     list-style: none;
     display: flex;
-    gap: 25px;
+    gap: 20px;
 }
 
 .sticky-header .nav-menu ul li a {
-    color: #ffffff;
+    color: #e0e0e0; /* Light text */
     font-weight: 500;
     font-size: 16px;
     transition: color 0.3s ease;
 }
 
 .sticky-header .nav-menu ul li a:hover {
-    color: #ff4c60;
+    color: #bb86fc; /* Light purple on hover */
 }
 
 .menu-toggle {
     display: none;
-    color: #ffffff;
+    color: #e0e0e0; /* Light text */
     font-size: 28px;
     cursor: pointer;
 }
@@ -73,11 +78,12 @@ h1, h2, h3, h4, h5, h6 {
 .sidebar {
     position: fixed;
     top: 0;
-    left: -260px;
-    width: 260px;
+    left: -300px;
+    width: 300px;
     height: 100%;
-    background-color: #181818;
+    background-color: #1f1f1f; /* Dark sidebar background */
     padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     transition: left 0.3s ease;
     z-index: 999;
 }
@@ -85,7 +91,6 @@ h1, h2, h3, h4, h5, h6 {
 .sidebar nav ul {
     list-style: none;
     padding: 0;
-    margin: 0;
 }
 
 .sidebar nav ul li {
@@ -93,7 +98,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .sidebar nav ul li a {
-    color: #f5f5f5;
+    color: #e0e0e0; /* Light text */
     font-size: 18px;
     display: block;
     font-weight: 500;
@@ -101,15 +106,15 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Main Content */
 main {
-    margin-top: 100px;
+    margin-top: 80px;
     padding: 40px 0;
 }
 
 .hero-section {
-    background: #1f1f1f;
-    padding: 150px 20px;
+    background: #333333; /* Dark background */
+    color: #ffffff; /* Light text */
+    padding: 100px 20px;
     text-align: center;
-    color: #ffffff;
     position: relative;
     overflow: hidden;
 }
@@ -117,23 +122,11 @@ main {
 .hero-section::before {
     content: '';
     position: absolute;
-    top: -50px;
-    left: -50px;
-    width: 150px;
-    height: 150px;
-    background: rgba(255, 76, 96, 0.1);
-    border-radius: 50%;
-    z-index: 1;
-}
-
-.hero-section::after {
-    content: '';
-    position: absolute;
-    bottom: -50px;
-    right: -50px;
-    width: 150px;
-    height: 150px;
-    background: rgba(255, 76, 96, 0.1);
+    top: -150px;
+    left: -150px;
+    width: 300px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.2);
     border-radius: 50%;
     z-index: 1;
 }
@@ -154,22 +147,22 @@ main {
 
 .cta-button {
     padding: 12px 28px;
-    background-color: #ff4c60;
-    color: #ffffff;
+    background-color: #bb86fc; /* Light purple */
+    color: #333333; /* Dark text */
     font-weight: 700;
     border: none;
     cursor: pointer;
     font-size: 16px;
     border-radius: 25px;
-    box-shadow: 0 4px 15px rgba(255, 76, 96, 0.4);
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, color 0.3s ease;
     z-index: 2;
     position: relative;
 }
 
 .cta-button:hover {
-    background-color: #ff3246;
-    box-shadow: 0 6px 20px rgba(255, 50, 70, 0.5);
+    background-color: #3700b3; /* Darker purple */
+    color: #ffffff; /* Light text */
 }
 
 .about-section, .services-section, .contact-section {
@@ -177,39 +170,50 @@ main {
     text-align: center;
 }
 
+.about-section {
+    background-color: #1e1e1e; /* Darker background */
+    border-bottom: 1px solid #333;
+}
+
+.services-section {
+    background-color: #2c2c2c; /* Slightly lighter dark background */
+}
+
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
     margin-top: 40px;
 }
 
 .service-item {
-    background-color: #2a2a2a;
-    padding: 30px 20px;
-    border-radius: 15px;
+    background-color: #333333; /* Darker card background */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .service-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    transform: translateY(-8px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7);
 }
 
 .service-item i {
     font-size: 50px;
-    color: #ff4c60;
+    color: #bb86fc; /* Light purple */
     margin-bottom: 20px;
 }
 
 .service-item h3 {
     margin-bottom: 15px;
     font-size: 22px;
+    font-weight: 500;
 }
 
 .service-item p {
     font-size: 16px;
-    color: #bbbbbb;
+    color: #e0e0e0; /* Light text */
 }
 
 .contact-section p {
@@ -217,15 +221,12 @@ main {
     margin-bottom: 30px;
 }
 
-.contact-section .cta-button {
-    margin-top: 20px;
-}
-
 /* Footer */
 footer {
-    background-color: #181818;
-    padding: 30px 0;
+    background-color: #121212; /* Dark background */
+    padding: 30px 20px;
     text-align: center;
+    color: #e0e0e0; /* Light text */
 }
 
 .footer-content {
@@ -236,18 +237,17 @@ footer {
 }
 
 .footer-content .social-links a {
-    color: #ffffff;
+    color: #e0e0e0; /* Light text */
     margin: 0 12px;
     font-size: 20px;
     transition: color 0.3s ease;
 }
 
 .footer-content .social-links a:hover {
-    color: #ff4c60;
+    color: #bb86fc; /* Light purple on hover */
 }
 
 .footer-content p {
-    color: #777777;
     font-size: 14px;
 }
 
